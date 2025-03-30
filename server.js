@@ -16,7 +16,7 @@ app.use(
 
 app.use(
   "/", (req, res)=>{
-    res.json("Hello World Asgradian =)");
+    res.json("Hello World =)");
   }
 );
 
