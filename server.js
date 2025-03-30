@@ -16,7 +16,7 @@ app.use(
 
 app.use(
   "/", (req, res)=>{
-    res.json("Api Working MF");
+    res.json("Hello World =)");
   }
 );
 
