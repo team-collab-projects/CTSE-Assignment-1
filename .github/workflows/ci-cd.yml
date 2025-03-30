@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: index.docker.io/${{ secrets.DOCKER_USERNAME }}/sanjayan201/myapp:${{ github.sha }}
+          tags: index.docker.io/${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
           file: ./Dockerfile
 
   deploy:
@@ -50,4 +50,4 @@ jobs:
           app-name: 'ctseassignment1'   # Replace with your Azure Web App name if different
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-          images: 'index.docker.io/${{ secrets.DOCKER_USERNAME }}/sanjayan201/myapp:${{ github.sha }}'
+          images: 'index.docker.io/${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}'
