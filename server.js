@@ -14,6 +14,12 @@ app.use(
   })
 );
 
+app.use(
+  "/", (req, res)=>{
+    res.json("Api Working MF");
+  }
+);
+
 app.use("/v1/users", require("./routes/userRoutes"));
 
 app.listen(port, () => {
