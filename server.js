@@ -14,11 +14,15 @@ app.use(
   })
 );
 
-app.use(
-  "/", (req, res)=>{
-    res.json("Hello World. Api is Calling You =)");
-  }
-);
+// Optional root route - will only match "/"
+app.get("/", (req, res) => {
+  res.json("Hello World!! Api is Calling You =)");
+});
+
+// Catch-all for undefined routes (optional but recommended)
+app.use("*", (req, res) => {
+  res.status(404).json({ msg: "Route not found" });
+});
 
 app.use("/api/users", require("./routes/userRoutes"));
 
