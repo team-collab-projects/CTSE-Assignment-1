@@ -16,11 +16,11 @@ app.use(
 
 app.use(
   "/", (req, res)=>{
-    res.json("Hello World!! Api is Calling You =)");
+    res.json("Hello World. Api is Calling You =)");
   }
 );
 
-app.use("/v1/users", require("./routes/userRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
