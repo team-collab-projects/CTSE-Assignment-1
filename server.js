@@ -14,6 +14,8 @@ app.use(
   })
 );
 
+app.use("/api/users", require("./routes/userRoutes"));
+
 // Optional root route - will only match "/"
 app.get("/", (req, res) => {
   res.json("Hello World!! Api is Calling You =)");
@@ -23,8 +25,6 @@ app.get("/", (req, res) => {
 app.use("*", (req, res) => {
   res.status(404).json({ msg: "Route not found" });
 });
-
-app.use("/api/users", require("./routes/userRoutes"));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
