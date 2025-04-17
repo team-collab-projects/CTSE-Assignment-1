@@ -5,13 +5,16 @@ dotenv.config();
 const URL = process.env.MONGODB_URL;
 
 const databaseConnection = () => {
-  mongoose.connect(URL);
   mongoose.set("strictQuery", true);
 
-  const connection = mongoose.connection;
-  connection.once("open", () => {
-    console.log(`Database Connection Success`);
-  });
+  mongoose.connect(URL)
+    .then(() => {
+      console.log("✅ Database connected successfully.");
+    })
+    .catch((err) => {
+      console.error("❌ Database connection failed:", err.message);
+      process.exit(1);
+    });
 };
 
 module.exports = databaseConnection;

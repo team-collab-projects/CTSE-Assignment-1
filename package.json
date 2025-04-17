@@ -1,5 +1,5 @@
 {
-  "name": "educational-platform-for-online-learning-backend",
+  "name": "microservice-for-user-authentication",
   "version": "1.0.0",
   "description": "backend for user management service",
   "main": "server.js",
@@ -7,16 +7,15 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "author": "Sujitha",
+  "author": "ctse-group",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.4",
+    "mongoose": "^8.9.5",
     "nodemailer": "^6.9.13",
     "pino": "^9.0.0"
   },
